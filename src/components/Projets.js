@@ -7,26 +7,67 @@ import projImg2 from "../assets/img/yumhub2.png";
 import projImg3 from "../assets/img/yumhub3.png";
 import projImg4 from "../assets/img/yumhub4.png";
 import projImg5 from "../assets/img/yumhub5.png";
+import projImg6 from "../assets/img/Medical.png";
+import projImg7 from "../assets/img/Pika.png";
 
 export const Projects = () => {
 
   const liveProject = [
     {
-      title: "YumHub Project 1",
-      description: "Frontend homepage design",
-      imageUrl: projImg1,
+      title: "Medical Service Website",
+      description: "Frontend design",
+      imageUrl: projImg6,
       projectUrl: "https://capable-parfait-b31267.netlify.app/",
+    },
+     {
+      title: "Drope Pika ",
+      description: "Frontend homepage design",
+      imageUrl: projImg7,
+      projectUrl: "https://dapper-pika-5873c3.netlify.app/",
     },
    
   ];
 
-    const frontendprojects = [
+    const frontend = [
     {
       title: "YumHub Project 4",
       description: "Order page design",
       imageUrl: projImg4,
       projectUrl: "#",
-    },]
+    },
+
+      {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg1,
+      projectUrl: "#",
+    },
+      {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg2,
+      projectUrl: "#",
+    },
+      {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg3,
+      projectUrl: "#",
+    },
+      {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg4,
+      projectUrl: "#",
+    },
+      {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg5,
+      projectUrl: "#",
+    },
+
+]
 
   
   const phythonprojects = [
@@ -84,7 +125,7 @@ export const Projects = () => {
                 </Nav.Item>
 
                 <Nav.Item>
-                  <Nav.Link eventKey="phythonprojects">Full Stack</Nav.Link>
+                  <Nav.Link eventKey="phythonprojects">Phythonprojects</Nav.Link>
                 </Nav.Item>
               </Nav>
 
@@ -101,7 +142,7 @@ export const Projects = () => {
                 {/* Tab 2: Only tabTwoProjects */}
                 <Tab.Pane eventKey="frontendprojects">
                   <Row>
-                    {frontendprojects.map((project, index) => {
+                    {frontend.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
