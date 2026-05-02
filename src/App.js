@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Banner } from './components/Banner';
 import { NavBar } from './components/NavBar';
@@ -6,8 +6,9 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projets';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { Newsletter } from './components/Newsletter';
-
+// import { Newsletter } from './components/Newsletter';
+import { Backend } from './components/Backend';
+import { MailchimpForm } from './components/MailchimpForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
      <Banner />
       <Skills />
       <Projects />
+      <Backend />
       <Contact />
-      <Newsletter />
+      {/* <Newsletter /> */}
+      <MailchimpForm />
       <Footer />
     </div>
   );

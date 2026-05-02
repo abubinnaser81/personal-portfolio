@@ -1,97 +1,122 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjeectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+
 import projImg1 from "../assets/img/yumhub1.png";
 import projImg2 from "../assets/img/yumhub2.png";
 import projImg3 from "../assets/img/yumhub3.png";
 import projImg4 from "../assets/img/yumhub4.png";
 import projImg5 from "../assets/img/yumhub5.png";
+
 export const Projects = () => {
 
+  const tabTwoProjects = [
+    {
+      title: "YumHub Project 1",
+      description: "Frontend homepage design",
+      imageUrl: projImg1,
+      projectUrl: "https://capable-parfait-b31267.netlify.app/",
+    },
+    {
+      title: "YumHub Project 2",
+      description: "Food menu page design",
+      imageUrl: projImg2,
+      projectUrl: "#",
+    },
+    {
+      title: "YumHub Project 3",
+      description: "Restaurant listing page",
+      imageUrl: projImg3,
+      projectUrl: "#",
+    },
+  ];
 
-    const projects = [
-        {
-            title: "Project 1",
-            description: "Description of Project 1",    
-            imageUrl: projImg1,
-            projectUrl: " "  
-        },
-         {
-            title: "Project 2",
-            description: "Description of Project 2",    
-            imageUrl: projImg2,
-            projectUrl: " "  
-        },
-         {
-            title: "Project 3",
-            description: "Description of Project 3",    
-            imageUrl: projImg3,
-            projectUrl: " "  
-        },
-         {
-            title: "Project 4",
-            description: "Description of Project 4",    
-            imageUrl: projImg4,
-            projectUrl: " "  
-        },
-         {
-            title: "Project 5",
-            description: "Description of Project 5",    
-            imageUrl: projImg5,
-            projectUrl: " "  
-        }
-    ];
-    return (
-        <section className="project" id="projects">
-            <Container>
-                <Row>  
-                    <Col>
-                    <h2>Projects</h2>
-                    <p>Here are some of my projects that I have worked on:</p> 
-                    <Tab.Container id="projects-tabs" defaultActiveKey="first"> 
-                     
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-        <Nav.Item>
-        <Nav.Link eventKey="first">Tab One</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="second">Tab Two</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="third">
-          Tab Three
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-        <Tab.Content>
-        <Tab.Pane eventKey="first">
+  
+  const tabThreeProjects = [
+    {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg4,
+      projectUrl: "#",
+    },
+    {
+      title: "YumHub Project 5",
+      description: "Responsive web design",
+      imageUrl: projImg5,
+      projectUrl: "#",
+    },
+  ];
+
+
+  const allProjects = [...tabTwoProjects, ...tabThreeProjects];
+
+  return (
+    <section className="project" id="projects">
+      <Container>
         <Row>
-            {
-                projects.map((project, index) => {
-                    return (
-                        <ProjectCard
-                            key={index}
-                            {...project}
-                        />
-                    )
-                })
-            }
-            </Row>
-            </Tab.Pane>
-            <Tab.Pane eventKey="second">
-                loren ipsum
-            </Tab.Pane>
-            <Tab.Pane eventKey="third">
-                loren ipsum
-            </Tab.Pane>
+          <Col>
+            <h2>Projects</h2>
 
-        </Tab.Content>
-    </Tab.Container>
-                    </Col>
-                </Row>
-            </Container>
-            <img className="background-image-right" src={colorSharp2} alt="Image" />    
-        </section>
-    )
+            <p>Here are some of my projects that I have worked on:</p>
 
+            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+              <Nav
+                variant="pills"
+                className="nav-pills mb-5 justify-content-center align-items-center"
+                id="pills-tab"
+              >
+                <Nav.Item>
+                  <Nav.Link eventKey="first">All Projects</Nav.Link>
+                </Nav.Item>
+
+
+                <Nav.Item>
+                  <Nav.Link eventKey="second">Frontend</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link eventKey="third">Full Stack</Nav.Link>
+                </Nav.Item>
+              </Nav>
+
+              <Tab.Content>
+                {/* Tab 1: all project */}
+                <Tab.Pane eventKey="first">
+                  <Row>
+                    {allProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+
+                {/* Tab 2: Only tabTwoProjects */}
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {tabTwoProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+
+                {/* Tab 3: Only tabThreeProjects */}
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {tabThreeProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
+          </Col>
+        </Row>
+      </Container>
+
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="Background"
+      />
+    </section>
+  );
 };

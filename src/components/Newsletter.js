@@ -4,9 +4,11 @@ import Alert from "react-bootstrap/Alert";
 
 export const Newsletter = ({ onValidate, status, message }) => {
   const [email, setEmail] = useState("");
+  const [localError, setLocalError] = useState("");
 
   const clearFields = () => {
     setEmail("");
+    setLocalError("");
   };
 
   useEffect(() => {
@@ -18,7 +20,19 @@ export const Newsletter = ({ onValidate, status, message }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email && email.indexOf("@") > -1) {
+    setLocalError("");
+
+    if (!email) {
+      setLocalError("Please enter your email address.");
+      return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+      setLocalError("Please enter a valid email address.");
+      return;
+    }
+
+    if (onValidate) {
       onValidate({
         EMAIL: email,
       });
@@ -30,19 +44,25 @@ export const Newsletter = ({ onValidate, status, message }) => {
       <div className="newsletter-bx">
         <Row>
           <Col lg={12} md={6} xl={5} className="px-1">
-            <h3>Subscribe to our Newsletter</h3>
+            <h3>Subscribe to my Newsletter</h3>
 
             {status === "sending" && (
               <Alert variant="info">Sending...</Alert>
             )}
 
-            {status === "error" && (
-              <Alert variant="danger">{message}</Alert>
+            {localError && (
+              <Alert variant="warning">{localError}</Alert>
             )}
 
             {status === "success" && (
               <Alert variant="success">
                 {message || "Subscribed successfully!"}
+              </Alert>
+            )}
+
+            {status === "error" && !localError && (
+              <Alert variant="warning">
+                Something went wrong. Please try again later.
               </Alert>
             )}
           </Col>
@@ -58,7 +78,9 @@ export const Newsletter = ({ onValidate, status, message }) => {
                   required
                 />
 
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={status === "sending"}>
+                  {status === "sending" ? "Sending..." : "Submit"}
+                </button>
               </div>
             </form>
           </Col>
