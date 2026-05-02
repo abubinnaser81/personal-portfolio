@@ -39,19 +39,50 @@ const responsive = {
                         <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>HTML</h5>
                             </div>
                              <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>CSS</h5>
                             </div>
                              <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>JavaScript</h5>
                             </div>
                              <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>React</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Node.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Tailwind CSS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>MongoDB</h5>
+
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Bootstrap</h5>
+
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Next.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Firebase</h5>
+
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>TypeScript</h5>
                             </div>
                             </Carousel>
                         </div>
@@ -60,7 +91,20 @@ const responsive = {
                  </Row>
             </Container>
             <img className="background-image-left" src={colorSharp} alt="Image" />
-            
+             <div className="soft-skills-bx">
+              <h3>Soft Skills</h3>
+
+              <div className="soft-skills-list">
+                <span>Communication Skills</span>
+                <span>Management</span>
+                <span>Leadership</span>
+                <span>Problem Solving</span>
+                <span>Teamwork</span>
+                <span>Critical Thinking</span>
+              </div>
+            </div>
+
         </section>
+        
     );
 };     

@@ -1,9 +1,11 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjeectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/yumhub1.png";
+import projImg2 from "../assets/img/yumhub2.png";
+import projImg3 from "../assets/img/yumhub3.png";
+import projImg4 from "../assets/img/yumhub4.png";
+import projImg5 from "../assets/img/yumhub5.png";
 export const Projects = () => {
 
 
@@ -29,13 +31,13 @@ export const Projects = () => {
          {
             title: "Project 4",
             description: "Description of Project 4",    
-            imageUrl: projImg1,
+            imageUrl: projImg4,
             projectUrl: " "  
         },
          {
             title: "Project 5",
             description: "Description of Project 5",    
-            imageUrl: projImg2,
+            imageUrl: projImg5,
             projectUrl: " "  
         }
     ];
