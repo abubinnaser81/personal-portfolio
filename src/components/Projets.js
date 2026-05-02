@@ -10,14 +10,39 @@ import projImg5 from "../assets/img/yumhub5.png";
 
 export const Projects = () => {
 
-  const tabTwoProjects = [
+  const liveProject = [
     {
       title: "YumHub Project 1",
       description: "Frontend homepage design",
       imageUrl: projImg1,
       projectUrl: "https://capable-parfait-b31267.netlify.app/",
     },
+   
+  ];
+
+    const frontendprojects = [
     {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg4,
+      projectUrl: "#",
+    },]
+
+  
+  const phythonprojects = [
+    {
+      title: "YumHub Project 4",
+      description: "Order page design",
+      imageUrl: projImg4,
+      projectUrl: "#",
+    },
+    {
+      title: "YumHub Project 5",
+      description: "Responsive web design",
+      imageUrl: projImg5,
+      projectUrl: "#",
+    },
+     {
       title: "YumHub Project 2",
       description: "Food menu page design",
       imageUrl: projImg2,
@@ -31,24 +56,8 @@ export const Projects = () => {
     },
   ];
 
-  
-  const tabThreeProjects = [
-    {
-      title: "YumHub Project 4",
-      description: "Order page design",
-      imageUrl: projImg4,
-      projectUrl: "#",
-    },
-    {
-      title: "YumHub Project 5",
-      description: "Responsive web design",
-      imageUrl: projImg5,
-      projectUrl: "#",
-    },
-  ];
 
-
-  const allProjects = [...tabTwoProjects, ...tabThreeProjects];
+//   const allProjects = [...liveProject, ...tabThreeProjects];
 
   return (
     <section className="project" id="projects">
@@ -59,49 +68,49 @@ export const Projects = () => {
 
             <p>Here are some of my projects that I have worked on:</p>
 
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+            <Tab.Container id="projects-tabs" defaultActiveKey="liveProjects">
               <Nav
                 variant="pills"
                 className="nav-pills mb-5 justify-content-center align-items-center"
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">All Projects</Nav.Link>
+                  <Nav.Link eventKey="liveProjects">Live Projects</Nav.Link>
                 </Nav.Item>
 
 
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Frontend</Nav.Link>
+                  <Nav.Link eventKey="frontendprojects">Frontend</Nav.Link>
                 </Nav.Item>
 
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Full Stack</Nav.Link>
+                  <Nav.Link eventKey="phythonprojects">Full Stack</Nav.Link>
                 </Nav.Item>
               </Nav>
 
               <Tab.Content>
                 {/* Tab 1: all project */}
-                <Tab.Pane eventKey="first">
+                <Tab.Pane eventKey="liveProjects">
                   <Row>
-                    {allProjects.map((project, index) => {
+                    {liveProject.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
 
                 {/* Tab 2: Only tabTwoProjects */}
-                <Tab.Pane eventKey="second">
+                <Tab.Pane eventKey="frontendprojects">
                   <Row>
-                    {tabTwoProjects.map((project, index) => {
+                    {frontendprojects.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
 
                 {/* Tab 3: Only tabThreeProjects */}
-                <Tab.Pane eventKey="third">
+                <Tab.Pane eventKey="phythonprojects">
                   <Row>
-                    {tabThreeProjects.map((project, index) => {
+                    {phythonprojects.map((project, index) => {
                       return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>

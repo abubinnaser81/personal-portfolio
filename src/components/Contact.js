@@ -40,7 +40,7 @@ export const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/abunaser50032@gmail.com",
+        "https://formsubmit.co/ajax/ abunaser50032@gmail.com",
         {
           method: "POST",
           headers: {
@@ -110,14 +110,14 @@ export const Contact = () => {
 
               <div className="contact-info-item">
                 <EnvelopeFill />
-                <a href="mailto:abunaser50032@gmail.com">
+                <a href="mailto:  abunaser50032@gmail.com"> 
                   abunaser50032@gmail.com
                 </a>
               </div>
 
               <div className="contact-info-item">
                 <TelephoneFill />
-                <a href="tel:+8801832617081">01832617081</a>
+                <a href="tel:  +8801832617081">  01832617081</a>
               </div>
             </div>
           </Col>
