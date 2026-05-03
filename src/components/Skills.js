@@ -1,9 +1,18 @@
 import { Row, Col,Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter1 from "../assets/img/HTML.png";
+import meter2 from "../assets/img/CSSS.png";
+import meter3 from "../assets/img/JS@@.png";
+import meter4 from "../assets/img/REACTs.png";
+import meter5 from "../assets/img/NJS.png";
+import meter6 from "../assets/img/TAIL (2).png";
+import meter7 from "../assets/img/MGDB1.png";
+import meter8 from "../assets/img/BOOT1.png";
+import meter9 from "../assets/img/NTSJJ.png";
+import meter10 from "../assets/img/FB1.png";
+import meter11 from "../assets/img/TPS.png";
+
 import colorSharp from "../assets/img/color-sharp.png";
 export const Skills = () => {
  
@@ -50,38 +59,38 @@ const responsive = {
                                 <h5>JavaScript</h5>
                             </div>
                              <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter4} alt="Image" />
                                 <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter5} alt="Image" />
                                 <h5>Node.js</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter6} alt="Image" />
                                 <h5>Tailwind CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter7} alt="Image" />
                                 <h5>MongoDB</h5>
 
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter8} alt="Image" />
                                 <h5>Bootstrap</h5>
 
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter9} alt="Image" />
                                 <h5>Next.js</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter10} alt="Image" />
                                 <h5>Firebase</h5>
 
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter11} alt="Image" />
                                 <h5>TypeScript</h5>
                             </div>
                             </Carousel>

@@ -9,6 +9,15 @@ import projImg4 from "../assets/img/yumhub4.png";
 import projImg5 from "../assets/img/yumhub5.png";
 import projImg6 from "../assets/img/Medical.png";
 import projImg7 from "../assets/img/Pika.png";
+import projImg8 from "../assets/img/WEP1.png";
+import projImg9 from "../assets/img/WEP2.png";
+import projImg10 from "../assets/img/WEP3.png";
+import projImg11 from "../assets/img/WEP4.png";
+import projImg12 from "../assets/img/FMD1.png";
+import projImg13 from "../assets/img/FMD2.png";
+import projImg14 from "../assets/img/FMD3.png";
+import projImg15 from "../assets/img/FMD4.png";
+import projImg16 from "../assets/img/FMD5.png";
 
 export const Projects = () => {
 
@@ -72,27 +81,57 @@ export const Projects = () => {
   
   const phythonprojects = [
     {
-      title: "YumHub Project 4",
-      description: "Order page design",
-      imageUrl: projImg4,
-      projectUrl: "#",
+      title: "Pattern Recognition 1",
+      description: "Weather Prediction using Machine Learning",
+      imageUrl: projImg8,
+      projectUrl: "https://colab.research.google.com/drive/1EBa7XOgIEMvqQpm1gmRtvJGgo9V_C23r#scrollTo=oHbxXROcXrPf",
     },
     {
-      title: "YumHub Project 5",
-      description: "Responsive web design",
-      imageUrl: projImg5,
+      title: "Pattern Recognition 2",
+      description: "Weather Prediction using Machine Learning",
+      imageUrl: projImg9,
       projectUrl: "#",
     },
      {
-      title: "YumHub Project 2",
-      description: "Food menu page design",
-      imageUrl: projImg2,
+      title: "Pattern Recognition 3",
+      description: "Weather Prediction using Machine Learning",
+      imageUrl: projImg10,
       projectUrl: "#",
     },
     {
-      title: "YumHub Project 3",
-      description: "Restaurant listing page",
-      imageUrl: projImg3,
+      title: "Pattern Recognition 4",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg11,
+      projectUrl: "#",
+    },
+     {
+      title: "Artificial Intelligence Neural Network",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg12,
+      projectUrl: "https://github.com/abubinnaser81/face-mask-detection-naser",
+    },
+     {
+      title: "Artificial Intelligence Neural Network 2",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg13,
+      projectUrl: "#",
+    },
+     {
+      title: "Artificial Intelligence Neural Network 3",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg14,
+      projectUrl: "#",
+    },
+     {
+      title: "Artificial Intelligence  4",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg15,
+      projectUrl: "#",
+    },
+     {
+      title: "Artificial Intelligence 5",
+      description: "Face Mask Detection using Machine Learning",
+      imageUrl: projImg16,
       projectUrl: "#",
     },
   ];
